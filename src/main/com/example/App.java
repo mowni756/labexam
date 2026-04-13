@@ -1,14 +1,15 @@
-package com.student.app;
+package com.example;
 
 import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.util.Scanner(System.in).useLocale(Locale.US));
         List<Student> students = new ArrayList<>();
 
+        System.out.println("--- Student Performance Analytics System ---");
         for (int i = 1; i <= 5; i++) {
-            System.out.println("Enter details for Student " + i + ":");
+            System.out.println("\nEnter details for Student " + i + ":");
             System.out.print("Name: ");
             String name = sc.next();
             System.out.print("CAT (30M): ");
@@ -54,4 +55,3 @@ class Student {
         return "F";
     }
 }
-
