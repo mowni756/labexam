@@ -1,24 +1,28 @@
-package com.student.app;
+package com.example;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class AppTest {
+    
     @Test
     public void testTotalCalculation() {
-        Student s = new Student("TestUser", 25, 15, 45); // Total 85
+        // CAT: 25, Assignment: 15, FAT: 45 = 85
+        Student s = new Student("TestUser", 25, 15, 45); 
         assertEquals(85.0, s.getTotal(), 0.01);
     }
 
     @Test
     public void testGradeS() {
-        Student s = new Student("TopPerformer", 30, 20, 45); // Total 95
+        // Perfect score = Grade S
+        Student s = new Student("TopPerformer", 30, 20, 50); 
         assertEquals("S", s.getGrade());
     }
 
     @Test
     public void testGPACalculation() {
-        Student s = new Student("AverageUser", 20, 10, 40); // Total 70
+        // Total 70 / 10 = 7.0 GPA
+        Student s = new Student("AverageUser", 20, 10, 40); 
         assertEquals(7.0, s.getGPA(), 0.1);
     }
 }
